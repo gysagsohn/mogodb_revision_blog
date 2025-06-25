@@ -1,5 +1,7 @@
 # mogodb_revision_blog
 
+## Models to make
+
 ### Blog
 
 - Title
@@ -12,6 +14,7 @@
 - Audit history
 	- user 
 	- timestamp 
+
 
 ### Users 
 
