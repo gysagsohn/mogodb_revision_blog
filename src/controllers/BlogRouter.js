@@ -5,7 +5,7 @@ const router = express.Router();
 
 router.get("/", async (request, response, next) => {
 
-	let result = await BlogModel.find({}).populate("author").exec();
+	let result = await BlogModel.find({}).populate("author", "-password").exec();
 
 	response.json({
 		message:"Blog router homepage",
@@ -16,7 +16,7 @@ router.get("/", async (request, response, next) => {
 
 router.get("/findById/:id", async (request, response, next) => {
 
-	let result = await BlogModel.findById(request.params.id).populate("author").exec();
+	let result = await BlogModel.findById(request.params.id).populate("author", "-password").exec();
 
 	response.json({
 		message:"Blog router homepage",
@@ -26,7 +26,7 @@ router.get("/findById/:id", async (request, response, next) => {
 
 router.post("/findOneQuery", async (request, response, next) => {
 
-	let result = await BlogModel.findOne(request.body).populate("author").exec();
+	let result = await BlogModel.findOne(request.body).populate("author", "-password").exec();
 
 	response.json({
 		message:"Blog router homepage",
@@ -36,7 +36,7 @@ router.post("/findOneQuery", async (request, response, next) => {
 
 router.post("/findManyQuery", async (request, response, next) => {
 
-	let result = await BlogModel.find(request.body).populate("author").exec();
+	let result = await BlogModel.find(request.body).populate("author", "-password").exec();
 
 	response.json({
 		message:"Blog router homepage",

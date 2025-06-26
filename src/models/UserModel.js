@@ -21,7 +21,8 @@ const userSchema = mongoose.Schema({
 	password: {
 		type: String, 
 		required: true, 
-		unique: false
+		unique: false,
+		select: false
 	}
 	// isAdmin // boolean for role authorization 
 	// comments: {
