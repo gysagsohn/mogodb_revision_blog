@@ -6,14 +6,17 @@
   "scripts": {
     "start": "node src/index.js",
     "dev": "nodemon src/index.js",
-    "seed":"node src/utils/seed.js",
-    "drop": "node src/utils/drop.js" 
+    "seed": "node src/utils/seed.js",
+    "drop": "node src/utils/drop.js"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "bcryptjs": "^3.0.2",
+    "dotenv": "^16.5.0",
     "express": "^4.19.2",
+    "jsonwebtoken": "^9.0.2",
     "mongoose": "^8.16.0"
   },
   "devDependencies": {
